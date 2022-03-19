@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --bg-color: rgb(19, 25, 38);
+
+  --color: #3679ac;
+
+  --font-color: #cfbaba;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+  background: transparent;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
+    Lucida Grande, sans-serif;
+
+  color: var(--color);
+
+  background-color: var(--bg-color);
+
+  font-weight: 300;
+
+  line-height: 1.6;
+}
+
+.icon {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke-width: 0;
+  stroke: var(--color);
+  fill: var(--color);
+}
