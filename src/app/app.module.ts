@@ -5,11 +5,9 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ServiceComponent } from './service/service.component';
-import { ObjectForDirective } from './core/object-for.directive';
-import { ObjToArrayPipe } from './core/obj-to-array.pipe';
 
 @NgModule({
-  declarations: [AppComponent, ServiceComponent, ObjectForDirective, ObjToArrayPipe],
+  declarations: [AppComponent, ServiceComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     ServiceWorkerModule.register('ngsw-worker.js', {

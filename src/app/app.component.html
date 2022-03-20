@@ -21,14 +21,18 @@
           <a
             *ngFor="let social of user.social | keyvalue"
             [href]="social.value"
+            target="_blank"
           >
-            <svg class="icon {{ social.key }}">
+            <svg async loading="lazy" class="icon {{ social.key }}">
               <use
                 attr.xlink:href="../assets/icons/sprite.svg#icon-{{
                   social.key
                 }}"
               ></use>
             </svg>
+            <span>
+              {{ social.key }}
+            </span>
           </a>
         </div>
       </div>
@@ -86,7 +90,7 @@
   </section>
   <section id="skills" class="about--skills">
     <div class="about--skill" *ngFor="let item of skills | keyvalue">
-      <svg class="icon">
+      <svg async loading="lazy" class="icon">
         <use
           attr.xlink:href="../assets/icons/sprite.svg#{{ item.value }}"
         ></use>
@@ -106,7 +110,7 @@
       </div>
     </div>
     <div class="contact--svg">
-      <svg>
+      <svg async loading="lazy">
         <use xlink:href="../assets/icons/sprite.svg#personal-details"></use>
       </svg>
     </div>
