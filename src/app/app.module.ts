@@ -5,20 +5,21 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ServiceComponent } from './service/service.component';
+// import { WorkerAppModule } from '@angular/platform-webworker';
 
 @NgModule({
-  declarations: [AppComponent, ServiceComponent],
-  imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      // Register the ServiceWorker as soon as the app is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000',
-    }),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  exports: [],
+	declarations: [AppComponent, ServiceComponent],
+	imports: [
+		BrowserModule.withServerTransition({ appId: 'serverApp' }),
+		ServiceWorkerModule.register('ngsw-worker.js', {
+			enabled: environment.production,
+			// Register the ServiceWorker as soon as the app is stable
+			// or after 30 seconds (whichever comes first).
+			registrationStrategy: 'registerWhenStable:30000',
+		}),
+	],
+	providers: [],
+	bootstrap: [AppComponent],
+	exports: [],
 })
 export class AppModule {}
