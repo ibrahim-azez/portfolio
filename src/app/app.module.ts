@@ -11,7 +11,7 @@ import { ObjToArrayPipe } from './core/obj-to-array.pipe';
 @NgModule({
   declarations: [AppComponent, ServiceComponent, ObjectForDirective, ObjToArrayPipe],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
