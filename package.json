@@ -16,7 +16,7 @@
 		"lint": "ng lint",
 		"dev:ssr": "ng run porty:serve-ssr",
 		"serve:ssr": "node dist/porty/server/main.js",
-		"build:ssr": "ng build && && ng run porty:server",
+		"build:ssr": "ng build && ng run porty:server",
 		"prerender": "ng run porty:prerender "
 	},
 	"private": true,
