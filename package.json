@@ -5,7 +5,7 @@
 		"Ibrahim Azez <ibrahimazez@protonmail.com>"
 	],
 	"scripts": {
-		"start:heroku": "node dist/server",
+		"start:heroku": "node dist/porty/server",
 		"heroku-postbuild": "npm run build:ssr",
 		"ng": "ng",
 		"start": "ng serve --hmr",
