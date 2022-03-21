@@ -7,15 +7,16 @@
 	"scripts": {
 		"start:heroku": "node dist/porty/server",
 		"heroku-postbuild": "npm run build:ssr",
+		"vercel-build": "npm run build:ssr",
 		"ng": "ng",
 		"start": "ng serve --hmr",
-		"build": "ng build",
+		"build-dev": "ng build",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
 		"lint": "ng lint",
 		"dev:ssr": "ng run porty:serve-ssr",
 		"serve:ssr": "node dist/porty/server/main.js",
-		"build:ssr": "ng build && ng run porty:server",
+		"build:ssr": "ng build && --configuration production && ng run porty:server",
 		"prerender": "ng run porty:prerender "
 	},
 	"private": true,
