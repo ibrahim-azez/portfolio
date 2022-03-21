@@ -89,7 +89,7 @@ export class AppComponent {
 		javaScript: 'javascript',
 		typeScript: 'typescript',
 		angular: 'angular',
-		graphql: 'graphql',
+		graphQL: 'graphql',
 		express: 'express',
 		nestJS: 'nestjs',
 		mongoDB: 'mongodb',
