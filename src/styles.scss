@@ -19,7 +19,7 @@
 	box-sizing: inherit;
 	scroll-behavior: smooth;
 	background: transparent;
-	// transition: all 1s ease-out;
+	transition: all 0.1s ease-out;
 }
 
 html {
@@ -49,18 +49,22 @@ body {
 	fill: var(--color);
 }
 
-.displayNone {
-	display: none !important;
-}
-
-.displayFlex {
-	display: flex !important;
-}
-
-// .displayTransformTen {
-// 	transform: translateX(-10rem) !important;
+// .displayNone {
+// 	display: none !important;
 // }
 
-// .displayTransformZero {
-// 	transform: translateY(0) !important;
+// .displayFlex {
+// 	display: flex !important;
 // }
+
+.transformHundredRight {
+	transform: translateX(100vw) !important;
+}
+
+// .transformFiftyRight {
+// 	transform: translateX(50vw) !important;
+// }
+
+.transformZero {
+	transform: translateX(0) !important;
+}

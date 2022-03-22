@@ -5,15 +5,16 @@
 				<span><\</span>{{ user.fullName }}<span>></span>
 			</h4>
 
-			<div class="links-border" (click)="displayType = 'displayFlex'">
+			<div class="links-border" (click)="displayType = 'transformZero'">
 				<span></span>
 				<span></span>
 			</div>
+
 			<div
-				class="header--nav__links {{ displayType }} "
-				(click)="displayType = 'displayNone'"
+				class="header--nav__links {{ displayType }}"
+				(click)="displayType = 'transformHundredRight'"
 			>
-				<span class="links-background-color">
+				<span class="links-background-color {{ displayType }}">
 					<a href="#about">About</a>
 					<a href="#contact">Contact</a>
 					<a href="#skills">Skills</a><a href="#services">Services</a>

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	displayType: string = 'displayNone';
+	displayType: string = 'transformHundredRight';
 	user = {
 		fullName: 'Ibrahim Azez',
 		email: 'ibrahimazez@protonamail.com',
