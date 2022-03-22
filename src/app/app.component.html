@@ -1,121 +1,121 @@
 <div class="container">
-  <header class="header">
-    <nav class="header--nav">
-      <h4 class="header--nav__title">
-        <span><\</span>{{ user.fullName }}<span>></span>
-      </h4>
-      <div class="header--nav__links">
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#skills">Skills</a><a href="#services">Services</a>
-      </div>
-    </nav>
-    <div class="header--profile">
-      <div class="header--context">
-        <p>Hi There</p>
-        <p>
-          I'm <span> {{ user.fullName }}</span>
-        </p>
-        <p>I'm a {{ user.jobTitle }}</p>
-        <div class="header--icons">
-          <a
-            *ngFor="let social of user.social | keyvalue"
-            [href]="social.value"
-            target="_blank"
-          >
-            <svg async loading="lazy" class="icon {{ social.key }}">
-              <use
-                attr.xlink:href="../assets/icons/sprite.svg#icon-{{
-                  social.key
-                }}"
-              ></use>
-            </svg>
-            <span>
-              {{ social.key }}
-            </span>
-          </a>
-        </div>
-      </div>
-      <div class="profilePicture">
-        <svg async loading="lazy">
-          <use xlink:href="../assets/icons/sprite.svg#working-man"></use>
-        </svg>
-      </div>
-      <!-- <img
-        class="profilePicture"
-        async
-        src="../assets/icons/sprite.svg#working-man"
-        alt="working-man"
-      /> -->
-    </div>
-  </header>
-  <section id="services" class="services">
-    <app-service
-      *ngFor="let service of serviceList"
-      [serviceInfo]="service"
-    ></app-service>
-  </section>
+	<header class="header">
+		<nav class="header--nav">
+			<h4 class="header--nav__title">
+				<span><\</span>{{ user.fullName }}<span>></span>
+			</h4>
 
-  <section id="about" class="about">
-    <app-service [serviceInfo]="aboutMe"></app-service>
-    <div class="about--context">
-      <div class="about--education-details">
-        <h4>Some Coursework</h4>
+			<div class="links-border" (click)="displayType = 'displayFlex'">
+				<span></span>
+				<span></span>
+			</div>
+			<div
+				class="header--nav__links {{ displayType }} "
+				(click)="displayType = 'displayNone'"
+			>
+				<span class="links-background-color">
+					<a href="#about">About</a>
+					<a href="#contact">Contact</a>
+					<a href="#skills">Skills</a><a href="#services">Services</a>
+				</span>
+			</div>
+		</nav>
+		<div class="header--profile">
+			<div class="header--context">
+				<p>Hi There</p>
+				<p>
+					I'm <span> {{ user.fullName }}</span>
+				</p>
+				<p>I'm a {{ user.jobTitle }}</p>
+				<div class="header--icons">
+					<a
+						*ngFor="let social of user.social | keyvalue"
+						[href]="social.value"
+						target="_blank"
+					>
+						<svg async loading="lazy" class="icon {{ social.key }}">
+							<use
+								attr.xlink:href="../assets/icons/sprite.svg#icon-{{
+									social.key
+								}}"
+							></use>
+						</svg>
+						<span>
+							{{ social.key }}
+						</span>
+					</a>
+				</div>
+			</div>
+			<div class="profilePicture">
+				<svg async loading="lazy">
+					<use xlink:href="../assets/icons/sprite.svg#working-man"></use>
+				</svg>
+			</div>
+		</div>
+	</header>
+	<section id="services" class="services">
+		<app-service
+			*ngFor="let service of serviceList"
+			[serviceInfo]="service"
+		></app-service>
+	</section>
 
-        <div>
-          <div
-            class="about--education-detail"
-            style="margin-bottom: 0.6rem"
-            *ngFor="let item of courses"
-          >
-            <strong>{{ item }}</strong>
-          </div>
-        </div>
-      </div>
-      <div class="about--education-details">
-        <h4>Education</h4>
+	<section id="about" class="about">
+		<app-service [serviceInfo]="aboutMe"></app-service>
+		<div class="about--context">
+			<div class="about--coursework">
+				<h4>Some Coursework</h4>
 
-        <div>
-          <div
-            class="about--education-detail"
-            *ngFor="let item of educationDetails"
-          >
-            <strong>{{ item.title }}</strong>
-            <p>{{ item.date }}</p>
-            <p>{{ item.place }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="skills" class="about--skills">
-    <div class="about--skill" *ngFor="let item of skills | keyvalue">
-      <svg async loading="lazy" class="icon">
-        <use
-          attr.xlink:href="../assets/icons/sprite.svg#{{ item.value }}"
-        ></use>
-      </svg>
-      <strong>{{ item.key }}</strong>
-    </div>
-  </section>
+				<div>
+					<div class="about--Coursework-element" *ngFor="let item of courses">
+						<strong>{{ item }}</strong>
+					</div>
+				</div>
+			</div>
+			<div class="about--education-details">
+				<h4>Education</h4>
 
-  <section id="contact" class="contact">
-    <div class="contact--personal-details">
-      <h4>Personal Details</h4>
-      <div>
-        <div class="contact--personal-detail">
-          <strong>email</strong>
-          <p>{{ user.email }}</p>
-        </div>
-      </div>
-    </div>
-    <div class="contact--svg">
-      <svg async loading="lazy">
-        <use xlink:href="../assets/icons/sprite.svg#personal-details"></use>
-      </svg>
-    </div>
-  </section>
-  <footer class="footer">
-    <p>&copy; {{ footer }}</p>
-  </footer>
+				<div>
+					<div
+						class="about--education-detail"
+						*ngFor="let item of educationDetails"
+					>
+						<strong>{{ item.title }}</strong>
+						<p>{{ item.date }}</p>
+						<p>{{ item.place }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="skills" class="about--skills">
+		<div class="about--skill" *ngFor="let item of skills | keyvalue">
+			<svg async loading="lazy" class="icon">
+				<use
+					attr.xlink:href="../assets/icons/sprite.svg#{{ item.value }}"
+				></use>
+			</svg>
+			<strong>{{ item.key }}</strong>
+		</div>
+	</section>
+
+	<section id="contact" class="contact">
+		<div class="contact--personal-details">
+			<h4>Personal Details</h4>
+			<div>
+				<div class="contact--personal-detail">
+					<strong>email</strong>
+					<p>{{ user.email }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="contact--svg">
+			<svg async loading="lazy">
+				<use xlink:href="../assets/icons/sprite.svg#personal-details"></use>
+			</svg>
+		</div>
+	</section>
+	<footer class="footer">
+		<p>&copy; {{ footer }}</p>
+	</footer>
 </div>

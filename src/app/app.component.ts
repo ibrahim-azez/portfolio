@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
-
+	displayType: string = 'displayNone';
 	user = {
 		fullName: 'Ibrahim Azez',
 		email: 'ibrahimazez@protonamail.com',
@@ -96,5 +95,5 @@ export class AppComponent {
 		postgreSQL: 'postgresql',
 	};
 
-	footer = 'Rights is reserved to Ibrahim Azez';
+	footer = 'All Rights is reserved to Ibrahim Azez';
 }
