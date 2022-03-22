@@ -47,7 +47,7 @@
 								{
 									"type": "anyComponentStyle",
 									"maximumWarning": "3kb",
-									"maximumError": "7kb"
+									"maximumError": "10kb"
 								}
 							],
 							"fileReplacements": [
@@ -61,7 +61,7 @@
 								"scripts": true,
 								"styles": {
 									"minify": true,
-									"inlineCritical": false
+									"inlineCritical": true
 								},
 								"fonts": true
 							}
