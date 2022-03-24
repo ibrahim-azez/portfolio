@@ -1,29 +1,31 @@
 {
-  "name": "Ibrahim-Azez",
-  "short_name": "ia",
-  "theme_color": "#3a83ba",
-  "background_color": "#131926",
-  "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
-  "icons": [
-    {
-      "src": "assets/icons/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/icons/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/icons/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
-    }
-  ]
+	"name": "Ibrahim Azez",
+	"short_name": "Ibrahim Azez",
+	"theme_color": "#3a83ba",
+	"background_color": "#131926",
+	"display": "standalone",
+	"scope": "./",
+	"start_url": "./",
+	"dir": "ltr",
+	"lang": "en-US",
+	"icons": [
+		{
+			"src": "assets/icons/apple-touch-icon.png",
+			"sizes": "180x180",
+			"type": "image/png",
+			"purpose": "maskable any"
+		},
+		{
+			"src": "assets/icons/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "maskable any"
+		},
+		{
+			"src": "assets/icons/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable any"
+		}
+	]
 }

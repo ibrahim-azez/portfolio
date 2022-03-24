@@ -93,6 +93,7 @@ export class AppComponent {
 		nestJS: 'nestjs',
 		mongoDB: 'mongodb',
 		postgreSQL: 'postgresql',
+		sass:"sass"
 	};
 
 	footer = 'All Rights is reserved to Ibrahim Azez';
