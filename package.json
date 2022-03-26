@@ -6,8 +6,8 @@
 	],
 	"scripts": {
 		"start:heroku": "node dist/porty/server",
-		"heroku-postbuild": "npm run build:ssr",
-		"vercel-build": "npm run build:ssr",
+		"heroku-postbuild": "npm run build:ssr  ",
+		"vercel-build": "npm run build:ssr && npm run prerender",
 		"bundle-report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/browser/stats.json",
 		"ng": "ng",
 		"start": "ng serve --hmr",
