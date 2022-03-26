@@ -301,13 +301,8 @@
 
 .about {
 	grid-column: full-start / full-end;
-
-	// ::before {
-	// background-color: linear-gradient(0deg, var(--bg-darker-color), #1d2330);
-	// }
-	// clip-path: polygon(0 0, 100% 0, 0 100%);
 	background-color: var(--bg-darker-color);
-	// }
+
 	display: grid;
 	grid-template-rows: min-content;
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 100%));
@@ -317,37 +312,19 @@
 
 	padding: 5rem 0;
 
-	// @media only screen and (min-width: 0) and (max-width: 595px) {
-	// 	gap: 0;
-	// }
-
 	& > app-service {
 		grid-column: 1 / -1;
 		text-align: center;
-
-		// @media only screen and (min-width: 0) and (max-width: 595px) {
-		// 	height: 5rem;
-		// }
 	}
 
 	&--context {
-		// grid-column: context-middle-start / context-middle-end;
 		display: grid;
-		// grid-template-rows: 1fr;
 		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-
 		justify-content: center;
 		justify-items: center;
-		// width: 100%;
 		min-width: 75%;
 		max-width: 100%;
-		// gap: 5rem;
 		padding: 2rem 4rem;
-
-		// @media only screen and (min-width: 0) and (max-width: 595px) {
-		// 	grid-template-rows: min-content min-content;
-		// 	gap: 5rem;
-		// }
 	}
 
 	// &--coursework {
@@ -569,15 +546,11 @@
 		align-self: flex-start;
 		justify-self: flex-start;
 		display: grid;
-		// justify-content: center;
 		align-items: center;
 		min-width: 40rem;
 		min-height: 40rem;
 
 		@media only screen and (min-width: 0) and (max-width: 515px) {
-			// justify-content: end;
-			// min-width: 30rem;
-			// min-height: 35rem;
 			display: none;
 		}
 

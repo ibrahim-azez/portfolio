@@ -71,9 +71,12 @@ body {
 	// animation-iteration-count: infinite;
 }
 
-// .shake {
-// transform: translateX(0) !important;
-// animation-duration: 1s;
-// animation-name: shake;
-// animation-iteration-count: infinite;
+// @keyframes movingUp {
+// 	from {
+// 		transform: translateY(10rem);
+// 	}
+
+// 	to {
+// 		transform: translateX(0rem);
+// 	}
 // }

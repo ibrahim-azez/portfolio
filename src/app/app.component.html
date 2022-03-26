@@ -57,13 +57,14 @@
 	</header>
 	<section id="services" class="services">
 		<app-service
+			loading="lazy"
 			*ngFor="let service of serviceList"
 			[serviceInfo]="service"
 		></app-service>
 	</section>
 
 	<section id="about" class="about">
-		<app-service [serviceInfo]="aboutMe"></app-service>
+		<app-service loading="lazy" [serviceInfo]="aboutMe"></app-service>
 		<div class="about--context">
 			<!-- <div class="about--coursework">
 				<h4>Some Coursework</h4>
