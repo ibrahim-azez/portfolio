@@ -33,7 +33,7 @@
 	}
 
 	@media only screen and (min-width: 0px) and (max-width: 400px) {
-		font-size: 1.7rem;
+		font-size: 1.8rem;
 	}
 
 	&--nav {
@@ -73,16 +73,32 @@
 
 			& > .links-background-color {
 				padding: 1.5rem;
+				// transition: all 0.4s linear;
+
 				& > a {
 					padding: 1.3rem;
 					color: var(--font-color);
 					text-decoration: none;
-					transition: all 0.4s linear;
+					// transition: all 0.4s linear;
 
 					&:hover {
 						background-color: rgba(var(--bg-darker-color), 0.6);
 						color: var(--color);
 						border-radius: 0.7rem;
+					}
+				}
+
+				@keyframes shake {
+					from {
+						transform: translateX(10rem);
+					}
+
+					50% {
+						transform: translateX(-1rem);
+					}
+
+					to {
+						transform: translateX(0rem);
 					}
 				}
 			}
@@ -130,7 +146,7 @@
 			& > .links-border {
 				display: flex;
 				flex-direction: column;
-				justify-content: space-evenly;
+				justify-content: space-around;
 				flex-grow: 0.01;
 				height: 100%;
 				transition: all 0.3s linear;
@@ -139,7 +155,7 @@
 				transition: all 0.3s ease-out;
 
 				& > span {
-					border-bottom: 0.2rem solid var(--font-color);
+					border-bottom: 0.3rem solid var(--font-color);
 				}
 
 				&:hover {
@@ -285,8 +301,13 @@
 
 .about {
 	grid-column: full-start / full-end;
-	background-color: var(--bg-darker-color);
 
+	// ::before {
+	// background-color: linear-gradient(0deg, var(--bg-darker-color), #1d2330);
+	// }
+	// clip-path: polygon(0 0, 100% 0, 0 100%);
+	background-color: var(--bg-darker-color);
+	// }
 	display: grid;
 	grid-template-rows: min-content;
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 100%));
@@ -383,7 +404,7 @@
 				align-self: center;
 				font-size: 2.5rem;
 				@media only screen and (min-width: 0) and (max-width: 425px) {
-					font-size: 1.7rem;
+					font-size: 2rem;
 				}
 			}
 
@@ -403,7 +424,7 @@
 			font-size: 2rem;
 			min-width: 25rem;
 			@media only screen and (min-width: 0) and (max-width: 425px) {
-				font-size: 1.7rem;
+				font-size: 1.8rem;
 			}
 
 			& > strong {
@@ -430,7 +451,7 @@
 		padding: 10rem 0;
 
 		gap: 5rem;
-		font-size: 1.7rem;
+		font-size: 1.8rem;
 
 		& > div {
 			background-color: var(--bg-darker-color);
@@ -469,7 +490,7 @@
 	justify-content: flex-start;
 	gap: 5rem;
 	background-color: var(--bg-darker-color);
-	font-size: 1.7rem;
+	font-size: 1.8rem;
 	position: relative;
 
 	@media only screen and (min-width: 480px) and (max-width: 643px) {
@@ -514,7 +535,7 @@
 		text-align: center;
 
 		@media only screen and (min-width: 0px) and (max-width: 500px) {
-			font-size: 1.7rem;
+			font-size: 1.8rem;
 		}
 
 		& > strong {
@@ -529,7 +550,7 @@
 
 		& > p {
 			justify-self: center;
-			font-size: 1.7rem;
+			font-size: 1.8rem;
 			@media only screen and (min-width: 480px) and (max-width: 643px) {
 				justify-self: flex-start;
 			}

@@ -84,7 +84,7 @@ export class AppComponent {
 	skills = {
 		linux: 'linux',
 		html5: 'html5',
-		css3: 'css3',
+		cSS3: 'css3',
 		javaScript: 'javascript',
 		typeScript: 'typescript',
 		angular: 'angular',
@@ -93,8 +93,9 @@ export class AppComponent {
 		nestJS: 'nestjs',
 		mongoDB: 'mongodb',
 		postgreSQL: 'postgresql',
-		sass:"sass"
+		sass: 'sass',
+		ngxs: 'ngxs',
 	};
 
-	footer = 'All Rights is reserved to Ibrahim Azez';
+	footer = 'Made with ❤️ and coding ';
 }

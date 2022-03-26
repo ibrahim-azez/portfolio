@@ -28,14 +28,11 @@ html {
 }
 
 body {
-	font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
-		Lucida Grande, sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 
 	color: var(--color);
 
 	background-color: var(--bg-color);
-
-	font-weight: 300;
 
 	line-height: 1.6;
 }
@@ -68,5 +65,15 @@ body {
 // }
 
 .transformZero {
-	transform: translateX(0) !important;
+	// transform: translateX(0) !important;
+	animation-duration: 1s;
+	animation-name: shake;
+	// animation-iteration-count: infinite;
 }
+
+// .shake {
+// transform: translateX(0) !important;
+// animation-duration: 1s;
+// animation-name: shake;
+// animation-iteration-count: infinite;
+// }
