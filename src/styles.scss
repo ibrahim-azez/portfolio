@@ -1,40 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 
+// @use "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@use "../node_modules/bootstrap/scss/bootstrap.scss";
+
 :root {
 	--bg-darker-color: #0d111a;
 
 	--bg-color: #131926;
 
-	--color: #3a83ba;
+	--font-color: #3a83ba;
 
-	--font-color: #ccc;
-}
-
-*,
-*::before,
-*::after {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	box-sizing: inherit;
-	scroll-behavior: smooth;
-	background: transparent;
-	transition: all 0.1s ease-out;
+	--primary-color: #ccc;
 }
 
 html {
-	box-sizing: border-box;
 	font-size: 62.5%;
 }
 
 body {
 	font-family: "Josefin Sans", sans-serif;
 
-	color: var(--color);
+	color: var(--primary-color) !important;
 
-	background-color: var(--bg-color);
+	background-color: var(--bg-color) !important;
 
-	line-height: 1.6;
+	line-height: 1.6 !important;
 }
 
 .icon {
@@ -46,15 +36,49 @@ body {
 	fill: var(--color);
 }
 
-// .displayNone {
-// 	display: none !important;
-// }
+.primary-color {
+	color: var(--primary-color) !important;
+}
 
-// .displayFlex {
-// 	display: flex !important;
-// }
+.font-color {
+	color: var(--font-color) !important;
+}
+
+.bg-darker-color {
+	background-color: var(--bg-darker-color) !important;
+}
+
+.fs-14 {
+	font-size: 1.4rem !important;
+}
+
+.fs-20 {
+	font-size: 2rem !important;
+}
+
+.w-75 {
+	width: 75% !important;
+}
+
+.h-45 {
+	height: 45rem !important;
+}
+
+.h-15 {
+	height: 15% !important;
+}
+
+.hw-100 {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.br-10 {
+	border-radius: 1rem;
+}
 
 .transformHundredRight {
+	// display: none !important;
 	@media only screen and (min-width: 0px) and (max-width: 750px) {
 		transform: translateX(100vw) !important;
 	}
@@ -66,6 +90,7 @@ body {
 
 .transformZero {
 	// transform: translateX(0) !important;
+	// display: none !important;
 	animation-duration: 1s;
 	animation-name: shake;
 	// animation-iteration-count: infinite;

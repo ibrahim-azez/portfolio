@@ -1,55 +1,56 @@
-<div class="container">
-	<header class="header">
-		<nav class="header--nav">
-			<h4 class="header--nav__title">
+<div class="links-border" (click)="displayType = 'transformZero '">
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+
+<div class="container-fluid">
+	<header class="row container-fluid pt-2 header">
+		<nav class="row navbar align-items-baseline p-4">
+			<h2 class="col-6 h2 d-flex justify-content-center font-color">
 				<span><\</span>{{ user.fullName }}<span>></span>
-			</h4>
+			</h2>
 
-			<div class="links-border" (click)="displayType = 'transformZero '">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-
-			<div
-				class="header--nav__links {{ displayType }}"
-				(click)="displayType = 'transformHundredRight'"
-			>
-				<span class="links-background-color {{ displayType }}">
-					<a href="#about">About</a>
-					<a href="#contact">Contact</a>
-					<a href="#skills">Skills</a><a href="#services">Services</a>
-				</span>
+			<div class="col-6 navbar-nav flex-row justify-content-around fs-20">
+				<a class="nav-link primary-color" href="#about">About</a>
+				<a class="nav-link primary-color" href="#contact">Contact</a>
+				<a class="nav-link primary-color" href="#skills">Skills</a
+				><a class="nav-link primary-color" href="#services">Services</a>
 			</div>
 		</nav>
-		<div class="header--profile">
-			<div class="header--context">
-				<p>Hi There</p>
-				<p>
-					I'm <span> {{ user.fullName }}</span>
-				</p>
-				<p>I'm a {{ user.jobTitle }}</p>
-				<div class="header--icons">
+		<div class="row display-6 h-45">
+			<div
+				class="col-6 d-flex flex-column align-items-center justify-content-center"
+			>
+				<div>
+					<p class="fs-20">Hi There</p>
+					<p>
+						I'm <span class="font-color"> {{ user.fullName }}</span>
+					</p>
+					<p>I'm a {{ user.jobTitle }}</p>
+				</div>
+				<div class="row w-75 fs-14 bg-darker-color br-10 h-15">
 					<a
+						class="nav-link col primary-color d-flex flex-column justify-content-around align-items-center"
 						*ngFor="let social of user.social | keyvalue"
 						[href]="social.value"
 						target="_blank"
 					>
-						<svg async loading="lazy" class="icon {{ social.key }}">
+						<svg async loading="lazy" class="row icon {{ social.key }}">
 							<use
 								attr.xlink:href="../assets/icons/sprite.svg#icon-{{
 									social.key
 								}}"
 							></use>
 						</svg>
-						<span>
+						<span class="row">
 							{{ social.key }}
 						</span>
 					</a>
 				</div>
 			</div>
-			<div class="profilePicture">
-				<svg async loading="lazy">
+			<div class="col-6">
+				<svg async loading="lazy" class="hw-100">
 					<use xlink:href="../assets/icons/sprite.svg#working-man"></use>
 				</svg>
 			</div>
