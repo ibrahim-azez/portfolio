@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
 	displayType: string = 'transformHundredRight';
+
+	navLinks = ['about', 'contact', 'skills', 'services'];
 	user = {
 		fullName: 'Ibrahim Azez',
 		email: 'ibrahimazez@protonamail.com',
@@ -29,36 +31,35 @@ export class AppComponent {
     and further improve my IT skills. Have proven
     knowledge of MEAN Stack development with NestJS,
     database development with SQL Or NoSQL databases`,
-		hrStatus: true,
 	};
 
 	serviceList: IService[] = [
 		{
-			icon: 'frontend',
+			icon: 'angular',
 			style: 'service',
-			title: 'Frontend',
-			description: `Designing and developing responsive webapp beautiful lovely and attractive with Angular SCSS and more`,
-			hrStatus: false,
+			title: 'Angular',
+			description: `Designing and developing WebApp with Angular, Angular Universal, Angular PWA, state management with RxJS or NGXS`,
 		},
 		{
-			icon: 'backend',
+			icon: 'frontend',
 			style: 'service',
-			title: 'Backend',
-			description: `Building server easy to maintain with NodeJS Express NestJS using graphQL RESTful API `,
-			hrStatus: false,
+			title: 'Styling',
+			description: `Styling for responsive WebApp with SCSS, Bootstrap, Angular Material `,
 		},
+		{
+			icon: 'nodejs',
+			style: 'service',
+			title: 'NodeJS',
+			description: `Building Backend server with NestJS over ExpressJS with graphQL protocol or RESTful API`,
+		},
+
 		{
 			icon: 'database',
 			style: 'service',
 			title: 'DataBase',
-			description: `Modeling NoSQL with Mongodb or SQL with PostgreSQL`,
-			hrStatus: false,
+			description: `Modeling NoSQL database with Mongodb using mongoose or SQL database with PostgreSQL using typeORM`,
 		},
 	];
-
-	// personalDetails = {
-	//   email: 'ibrahimazez@protonamail.com',
-	// };
 
 	educationDetails = [
 		{
@@ -84,17 +85,19 @@ export class AppComponent {
 	skills = {
 		linux: 'linux',
 		html5: 'html5',
-		cSS3: 'css3',
-		javaScript: 'javascript',
-		typeScript: 'typescript',
+		css3: 'css3',
+		javascript: 'javascript',
+		typescript: 'typescript',
 		angular: 'angular',
-		graphQL: 'graphql',
+		graphql: 'graphql',
 		express: 'express',
-		nestJS: 'nestjs',
+		nestjs: 'nestjs',
 		mongoDB: 'mongodb',
 		postgreSQL: 'postgresql',
 		sass: 'sass',
 		ngxs: 'ngxs',
+		nodejs: 'nodejs',
+		bootstrap: 'bootstrap',
 	};
 
 	footer = 'Made with ❤️ and coding ';

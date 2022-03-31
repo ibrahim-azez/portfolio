@@ -2,11 +2,14 @@
 
 // @use "../node_modules/bootstrap/scss/bootstrap-grid.scss";
 @use "../node_modules/bootstrap/scss/bootstrap.scss";
+@use "@angular/material" as mat;
 
 :root {
-	--bg-darker-color: #0d111a;
+	--bg-darker-color: rgb(27, 32, 42);
 
-	--bg-color: #131926;
+	--bg-dark-color: #1e344a66;
+
+	--bg-color: rgb(30, 35, 46);
 
 	--font-color: #3a83ba;
 
@@ -15,16 +18,20 @@
 
 html {
 	font-size: 62.5%;
+	height: 100%;
 }
 
 body {
-	font-family: "Josefin Sans", sans-serif;
+	height: 100%;
+	// font-family: "Josefin Sans", Roboto, sans-serif;
 
 	color: var(--primary-color) !important;
 
 	background-color: var(--bg-color) !important;
 
-	line-height: 1.6 !important;
+	margin: 0;
+
+	font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .icon {
@@ -32,8 +39,8 @@ body {
 	width: 2.5rem;
 	height: 2.5rem;
 	stroke-width: 0;
-	stroke: var(--color);
-	fill: var(--color);
+	stroke: var(--font-color);
+	fill: var(--font-color);
 }
 
 .primary-color {
@@ -44,29 +51,37 @@ body {
 	color: var(--font-color) !important;
 }
 
+.bg-color {
+	background-color: var(--bg-color) !important;
+}
+
+.bg-dark-color {
+	background-color: var(--bg-dark-color) !important;
+}
+
 .bg-darker-color {
 	background-color: var(--bg-darker-color) !important;
 }
 
-.fs-14 {
-	font-size: 1.4rem !important;
-}
+// .fs-14 {
+// 	font-size: 1.4rem !important;
+// }
 
-.fs-20 {
-	font-size: 2rem !important;
-}
+// .fs-20 {
+// 	font-size: 2rem !important;
+// }
 
-.w-75 {
-	width: 75% !important;
-}
+// .w-75 {
+// 	width: 75% !important;
+// }
 
 .h-45 {
 	height: 45rem !important;
 }
 
-.h-15 {
-	height: 15% !important;
-}
+// .h-15 {
+// 	height: 15% !important;
+// }
 
 .hw-100 {
 	width: 100% !important;
@@ -75,6 +90,10 @@ body {
 
 .br-10 {
 	border-radius: 1rem;
+}
+
+.br-20 {
+	border-radius: 2rem;
 }
 
 .transformHundredRight {

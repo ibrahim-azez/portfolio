@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { ServiceComponent } from './service/service.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './core/material.module';
 // import { WorkerAppModule } from '@angular/platform-webworker';
 
 @NgModule({
-	declarations: [AppComponent, ServiceComponent],
+	declarations: [AppComponent],
 	imports: [
 		BrowserModule.withServerTransition({ appId: 'serverApp' }),
 		ServiceWorkerModule.register('ngsw-worker.js', {
@@ -17,6 +18,8 @@ import { ServiceComponent } from './service/service.component';
 			// or after 30 seconds (whichever comes first).
 			registrationStrategy: 'registerWhenStable:30000',
 		}),
+		BrowserAnimationsModule,
+		MaterialModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
