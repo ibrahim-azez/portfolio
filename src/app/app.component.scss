@@ -6,69 +6,74 @@
 // 	);
 // }
 
-.fade-in {
-	animation: fade-in 2s linear;
-}
+// .fade-in {
+// 	animation: fade-in 1s linear;
+// 	animation-iteration-count: 1;
+// }
 
-.move-left {
-	animation: fade-in 1s ease-in-out;
-	animation: move-left 1s ease-in-out;
-	// animation-delay: 0.5s;
-}
+// .move-left {
+// 	animation: move-left 1s ease-in-out;
+// 	animation-iteration-count: 1;
+// }
 
-.move-down {
-	animation: fade-in 1s ease-in-out;
-	animation: move-down 1s ease-in-out;
-	// animation-delay: 0.5s;
-}
+// .move-down {
+// 	animation: move-down 1s ease-in-out;
+// 	animation-iteration-count: 1;
+// 	// animation-delay: 0.5s;
+// }
 
 .move-up {
-	animation: fade-in 3s ease-in-out;
 	animation: move-up 1s ease-in-out;
+	animation-iteration-count: 1;
 	// animation-delay: 0.1s;
 }
 
 .header {
 	background-image: linear-gradient(0deg, #4ca2e333, #131926b3);
 	border-radius: 0 0 2rem 2rem;
-	@extend .fade-in;
 }
 
-@keyframes fade-in {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
+// @keyframes fade-in {
+// 	from {
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		opacity: 1;
+// 	}
+// }
 
-@keyframes move-down {
-	from {
-		transform: translateY(-25rem);
-	}
-	to {
-		transform: translateY(0);
-	}
-}
+// @keyframes move-down {
+// 	from {
+// 		opacity: 0;
+// 		transform: translateY(-25rem);
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: translateY(0);
+// 	}
+// }
 
 @keyframes move-up {
 	from {
+		opacity: 0;
 		transform: translateY(25rem);
 	}
 	to {
+		opacity: 1;
 		transform: translateY(0);
 	}
 }
 
-@keyframes move-left {
-	from {
-		transform: translateX(-25rem);
-	}
-	to {
-		transform: translateX(0);
-	}
-}
+// @keyframes move-left {
+// 	from {
+// 		opacity: 0;
+// 		transform: translateX(-25rem);
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: translateX(0);
+// 	}
+// }
 
 .social-icons {
 	width: 4rem;
@@ -100,7 +105,6 @@
 		height: 8rem;
 		background-color: var(--bg-darker-color);
 		width: 100vw;
-		font-size: calc(1.275rem + 0.3vw) !important;
 		border-radius: 0 0 2rem 2rem;
 	}
 }
