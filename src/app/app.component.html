@@ -1,194 +1,244 @@
-<div class="links-border" (click)="displayType = 'transformZero '">
-	<span></span>
-	<span></span>
-	<span></span>
-</div>
-
-<div class="container-fluid">
-	<header class="container-fluid pt-2 header shadow-sm">
-		<nav class="row navbar align-items-baseline p-4">
-			<h2 class="col-5 h2 d-flex justify-content-center font-color">
-				<span><\</span>{{ user.fullName }}<span>></span>
-			</h2>
-
-			<div class="col-6 navbar-nav flex-row justify-content-around">
-				<a
-					*ngFor="let link of navLinks"
-					mat-button
-					class="nav-link primary-color fs-3 px-4 py-2 text-capitalize"
-					href="#{{ link }}"
-					>{{ link }}</a
+<mat-drawer-container class="bg-dark-color" hasBackdrop="true">
+	<mat-drawer #drawer role="navigation" mode="over" class="bg-darker-color">
+		<div
+			class="row flex-column justify-content-center align-items-center m-5 vh-100"
+		>
+			<a
+				(click)="drawer.toggle()"
+				*ngFor="let link of navLinks"
+				mat-button
+				class="row primary-color fs-3 px-4 py-2 my-3 fw-bold text-capitalize"
+				href="#{{ link }}"
+				>{{ link }}</a
+			>
+		</div>
+	</mat-drawer>
+	<mat-drawer-content>
+		<div class="container-fluid">
+			<header
+				class="container-fluid d-flex flex-column justify-content-center pt-2 header shadow-sm"
+			>
+				<mat-toolbar-row
+					class="navbar align-items-baseline p-4 move-down justify-content-between p-fixed-font-max-w-768"
 				>
-			</div>
-		</nav>
-		<div class="row display-6 h-45">
-			<div
-				class="col-sm-12 col-md-6 d-flex flex-column align-items-center justify-content-center"
-			>
-				<div class="lh-lg">
-					<p class="fs-1 fw-bold">Hi There</p>
-					<p>
-						I'm <span class="font-color"> {{ user.fullName }}</span>
-					</p>
-					<p>I'm a {{ user.jobTitle }}</p>
-				</div>
-				<div class="row fs-3 bg-color br-10 w-auto">
-					<a
-						mat-button
-						class="nav-link col primary-color d-flex flex-column justify-content-around align-items-center mx-5 my-3"
-						*ngFor="let social of user.social | keyvalue"
-						[href]="social.value"
-						target="_blank"
+					<h2
+						class="col-sm-7 col-md-5 h2 d-flex justify-content-center font-color"
 					>
-						<svg async loading="lazy" class="row icon {{ social.key }}">
-							<use
-								attr.xlink:href="../assets/icons/sprite.svg#icon-{{
-									social.key
-								}}"
-							></use>
-						</svg>
-						<span class="row pt-1 text-capitalize">
-							{{ social.key }}
-						</span>
-					</a>
-				</div>
-			</div>
-			<div class="col-sm-12 col-md-6">
-				<svg async loading="lazy" class="hw-100">
-					<use xlink:href="../assets/icons/sprite.svg#working-man"></use>
-				</svg>
-			</div>
-		</div>
-	</header>
-	<section id="services" class="py-5 container-fluid">
-		<div class="row flex-column align-items-center justify-content-center m-5">
-			<h2
-				class="row flex-column align-items-center justify-content-center h2 fw-bold fs-1"
-			>
-				Some Services
-			</h2>
-			<hr class="w-50 font-color" />
-			<hr class="w-25 font-color" />
-		</div>
+						<span><\</span>{{ user.fullName }}<span>></span>
+					</h2>
+					<div class="col-2">
+						<button
+							mat-icon-button
+							(click)="drawer.toggle()"
+							class="n-d-min-w-768 row justify-content-end"
+						>
+							<mat-icon>menu</mat-icon>
+						</button>
+					</div>
 
-		<div class="row gap-5 justify-content-center">
-			<div class="col-3" *ngFor="let service of serviceList">
-				<div class="row p-4 shadow-sm br-10 bg-dark-color">
-					<div class="col-auto">
-						<svg style="width: 8rem; height: 8rem" async>
-							<use
-								attr.xlink:href="../../assets/icons/sprite.svg#{{
-									service.icon
-								}}"
-							></use>
+					<div
+						class="n-d-max-w-768 col-5 navbar-nav flex-row justify-content-around"
+					>
+						<a
+							*ngFor="let link of navLinks"
+							mat-button
+							class="nav-link primary-color fs-3 px-4 py-2 fw-bold text-capitalize"
+							href="#{{ link }}"
+							>{{ link }}</a
+						>
+					</div>
+				</mat-toolbar-row>
+				<div class="row display-6 h-45 move-left">
+					<div
+						class="col-sm-12 col-md-6 d-flex flex-column align-items-center justify-content-center"
+					>
+						<div class="lh-lg">
+							<p class="fs-1 fw-bold">Hi There</p>
+							<p>
+								I'm <span class="font-color"> {{ user.fullName }}</span>
+							</p>
+							<p>I'm a {{ user.jobTitle }}</p>
+						</div>
+						<div class="row fs-3 bg-color br-10 w-auto px-2">
+							<a
+								mat-button
+								class="col-3 nav-link col primary-color d-flex flex-column justify-content-around align-items-center m-3"
+								*ngFor="let social of user.social | keyvalue"
+								[href]="social.value"
+								target="_blank"
+							>
+								<svg loading="lazy" class="row icon {{ social.key }}">
+									<use
+										attr.xlink:href="../assets/icons/sprite.svg#icon-{{
+											social.key
+										}}"
+									></use>
+								</svg>
+								<span class="row pt-1 text-capitalize">
+									{{ social.key }}
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6">
+						<svg loading="lazy" class="hw-100">
+							<use xlink:href="../assets/icons/sprite.svg#working-man"></use>
 						</svg>
 					</div>
-					<div class="col-6">
-						<h2 class="h2 fw-bold">{{ service.title }}</h2>
-						<p class="fs-4">{{ service.description }}</p>
-					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="about" class="container bg-darker-color py-5 br-20 shadow-sm">
-		<div class="row flex-column px-5 align-items-center justify-content-center">
-			<div class="col-auto">
-				<svg class="col-auto" style="width: 8rem; height: 8rem" async>
-					<use
-						attr.xlink:href="../../assets/icons/sprite.svg#{{ aboutMe.icon }}"
-					></use>
-				</svg>
-			</div>
-
-			<div
-				class="row flex-column align-items-center justify-content-center m-5"
-			>
-				<h2 class="col-auto h2 fw-bold">{{ aboutMe.title }}</h2>
-				<p style="text-align: center" class="col-auto fs-4">
-					{{ aboutMe.description }}
-				</p>
-			</div>
-
-			<hr class="w-50 font-color" />
-			<hr class="w-25 font-color" />
-		</div>
-		<!-- <div class="about--coursework">
-				<h4>Some Coursework</h4>
-
-				<div class="about--Coursework-element">
-					<strong *ngFor="let item of courses">{{ item }}</strong>
+			</header>
+			<section id="services" class="py-5 my-5 container-fluid move-up">
+				<div
+					class="row flex-column align-items-center justify-content-center m-5"
+				>
+					<h2
+						class="row flex-column align-items-center justify-content-center h2 fw-bold fs-1 mb-5"
+					>
+						Some Services
+					</h2>
+					<hr class="w-50 font-color" />
+					<hr class="w-25 font-color" />
 				</div>
-			</div> -->
-		<div class="row justify-content-center py-5">
-			<h3 class="row justify-content-center h3 font-color fw-bold fs-2">
-				Education
-			</h3>
 
-			<div class="col-auto gap-5 justify-content-center">
-				<div *ngFor="let item of educationDetails">
-					<strong class="col fs-3">{{ item.title }}</strong>
-					<p class="col">{{ item.date }}</p>
-					<p class="col">{{ item.place }}</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="skills" class="my-5 conatiner">
-		<div class="row flex-column align-items-center justify-content-center">
-			<h2
-				class="row flex-column align-items-center justify-content-center h2 fw-bold fs-1"
-			>
-				Skills
-			</h2>
-			<hr class="w-50 font-color" />
-			<hr class="w-25 font-color" />
-		</div>
-		<div class="row gap-5 justify-content-center m-5">
-			<div
-				style="width: 13rem"
-				class="p-5 col-auto d-flex flex-column justify-content-center align-items-center bg-dark-color br-10 shadow-sm"
-				*ngFor="let item of skills | keyvalue"
-			>
-				<svg async loading="lazy" class="social-icons">
-					<use
-						attr.xlink:href="../assets/icons/sprite.svg#{{ item.value }}"
-					></use>
-				</svg>
-				<strong class="fs-4 pt-2 text-uppercase">{{ item.key }}</strong>
-			</div>
-		</div>
-	</section>
-
-	<section id="contact" class="container bg-darker-color p-5 br-20 shadow-sm">
-		<div class="row justify-content-around">
-			<div class="col">
-				<h3 class="row justify-content-center h3 font-color fw-bold fs-2">
-					Personal Details
-				</h3>
-				<div>
-					<div class="col-12">
-						<div class="row justify-content-center">
-							<strong class="fs-2 fw-bold col-auto">email</strong>
-							<p class="fs-3 col-auto">{{ user.email }}</p>
+				<div class="row gap-5 justify-content-center">
+					<div class="col-sm-5 col-md-3" *ngFor="let service of serviceList">
+						<div class="row p-4 gap-3 shadow-sm br-10 bg-dark-color">
+							<div class="col-auto">
+								<svg style="width: 8rem; height: 8rem">
+									<use
+										attr.xlink:href="../../assets/icons/sprite.svg#{{
+											service.icon
+										}}"
+									></use>
+								</svg>
+							</div>
+							<div class="col-12">
+								<h2 class="h2 fw-bold">{{ service.title }}</h2>
+								<p class="fs-4">{{ service.description }}</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 
-			<!-- <svg
+			<section id="e" class="container bg-darker-color py-5 br-20 shadow-sm">
+				<div class="row flex-column align-items-center justify-content-center">
+					<div class="col-auto">
+						<svg class="col-auto" style="width: 8rem; height: 8rem">
+							<use
+								attr.xlink:href="../../assets/icons/sprite.svg#{{
+									aboutMe.icon
+								}}"
+							></use>
+						</svg>
+					</div>
+
+					<div
+						class="row flex-column align-items-center justify-content-center"
+					>
+						<h2 class="col-auto h2 fw-bold">{{ aboutMe.title }}</h2>
+						<p style="text-align: center" class="col-auto fs-4 w-75">
+							{{ aboutMe.description }}
+						</p>
+					</div>
+
+					<hr class="w-50 font-color" />
+					<hr class="w-25 font-color" />
+				</div>
+				<div class="row m-5 justify-content-around">
+					<div
+						class="col-auto col-md-5 justify-content-center align-items-center p-5"
+					>
+						<h3
+							class="row h3 font-color fw-bold fs-2 mb-5 justify-content-sm-center"
+						>
+							Some Coursework
+						</h3>
+
+						<div class="row gap-5 fs-3">
+							<strong
+								*ngFor="let item of courses"
+								class="text-center-d-max-w-768"
+								>{{ item }}</strong
+							>
+						</div>
+					</div>
+					<div class="col-auto col-md-5 justify-content-center p-5">
+						<h3
+							class="row h3 font-color fw-bold fs-2 mb-5 justify-content-sm-center"
+						>
+							Education
+						</h3>
+
+						<div class="row gap-1">
+							<div class="col-auto" *ngFor="let item of educationDetails">
+								<strong class="col fs-3">{{ item.title }}</strong>
+								<p class="col">{{ item.date }}</p>
+								<p class="col">{{ item.place }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="skills" class="my-5 py-5 conatiner">
+				<div class="row flex-column align-items-center justify-content-center">
+					<h2
+						class="row flex-column align-items-center justify-content-center h2 fw-bold fs-1 mb-5"
+					>
+						Skills
+					</h2>
+					<hr class="w-50 font-color" />
+					<hr class="w-25 font-color" />
+				</div>
+				<div class="row gap-5 justify-content-center m-5">
+					<div
+						style="width: 13rem"
+						class="p-5 col-auto d-flex flex-column justify-content-center align-items-center bg-dark-color br-10 shadow-sm"
+						*ngFor="let item of skills | keyvalue"
+					>
+						<svg loading="lazy" class="social-icons">
+							<use
+								attr.xlink:href="../assets/icons/sprite.svg#{{ item.value }}"
+							></use>
+						</svg>
+						<strong class="fs-4 pt-2 text-uppercase">{{ item.key }}</strong>
+					</div>
+				</div>
+			</section>
+
+			<section
+				id="contact"
+				class="container bg-darker-color p-5 br-20 shadow-sm"
+			>
+				<div class="row justify-content-around">
+					<div class="col">
+						<h3 class="row justify-content-center h3 font-color fw-bold fs-2">
+							Personal Details
+						</h3>
+						<div>
+							<div class="col-12">
+								<div class="row justify-content-center align-items-baseline">
+									<strong class="fs-2 fw-bold col-auto">email</strong>
+									<p class="fs-3 col-auto">{{ user.email }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- <svg
 				class="position-absolute"
 				style="min-width: 10rem; min-height: 10rem"
-				async
+
 				loading="lazy"
 			>
 				<use xlink:href="../assets/icons/sprite.svg#personal-details"></use>
 			</svg> -->
+				</div>
+			</section>
+			<footer class="container my-5 border-top-blue">
+				<p class="row justify-content-center fs-3 py-5">{{ footer }}</p>
+			</footer>
 		</div>
-	</section>
-	<footer class="py-5" style="width: 100vw">
-		<p class="row justify-content-center fs-3 py-5">{{ footer }}</p>
-	</footer>
-</div>
+	</mat-drawer-content>
+</mat-drawer-container>
