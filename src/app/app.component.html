@@ -1,20 +1,11 @@
-<a href="#" class="p-fixed-font-max-w-768">
-	<button
-		mat-fab
-		style="background-color: var(--font-color)"
-		aria-label="Example icon button with a home icon"
-	>
-		<mat-icon style="color: var(--bg-darker-color)">home</mat-icon>
-	</button>
-</a>
-
-<mat-drawer-container class="bg-dark-color" hasBackdrop="true">
-	<mat-drawer
+<mat-sidenav-container class="bg-dark-color" hasBackdrop="true">
+	<mat-sidenav
 		#drawer
 		autoFocus="false"
 		role="navigation"
-		mode="side"
+		mode="over"
 		class="bg-darker-color"
+		role="main"
 	>
 		<div
 			class="row flex-column justify-content-center align-items-center m-5 vh-100"
@@ -28,8 +19,17 @@
 				>{{ link }}</a
 			>
 		</div>
-	</mat-drawer>
-	<mat-drawer-content>
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<a href="#" class="p-fixed-font-max-w-768">
+			<button
+				mat-fab
+				style="background-color: var(--font-color)"
+				aria-label="Example icon button with a home icon"
+			>
+				<mat-icon style="color: var(--bg-darker-color)">home</mat-icon>
+			</button>
+		</a>
 		<div class="container-fluid">
 			<header
 				class="container-fluid d-flex flex-column justify-content-center pt-2 header shadow-sm"
@@ -259,5 +259,5 @@
 				<p class="row justify-content-center fs-3 py-5">{{ footer }}</p>
 			</footer>
 		</div>
-	</mat-drawer-content>
-</mat-drawer-container>
+	</mat-sidenav-content>
+</mat-sidenav-container>
