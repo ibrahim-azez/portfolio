@@ -63,6 +63,7 @@
 							"aot": true,
 							"buildOptimizer": true,
 							"outputHashing": "all",
+
 							"optimization": {
 								"scripts": true,
 								"styles": {

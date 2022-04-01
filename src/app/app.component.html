@@ -21,8 +21,9 @@
 		</div>
 	</mat-sidenav>
 	<mat-sidenav-content>
-		<a href="#" class="p-fixed-font-max-w-768">
+		<a aria-label="Close" href="#" class="p-fixed-font-max-w-768">
 			<button
+				aria-label="Close"
 				mat-fab
 				style="background-color: var(--font-color)"
 				aria-label="Example icon button with a home icon"
@@ -44,6 +45,7 @@
 					</h2>
 					<div class="col-2">
 						<button
+							aria-label="Close"
 							mat-icon-button
 							(click)="drawer.toggle()"
 							class="n-d-min-w-768 row justify-content-end"
@@ -103,7 +105,7 @@
 					</div>
 				</div>
 			</header>
-			<section id="services" class="py-5 my-5 container-fluid move-up">
+			<section id="services" class="py-5 my-5 container-fluid">
 				<div
 					class="row flex-column align-items-center justify-content-center m-5"
 				>

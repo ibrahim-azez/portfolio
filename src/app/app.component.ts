@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	displayType: string = 'transformHundredRight';
-
 	navLinks = ['about', 'contact', 'skills', 'services'];
 	user = {
 		fullName: 'Ibrahim Azez',
