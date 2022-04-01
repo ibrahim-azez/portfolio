@@ -98,14 +98,19 @@
 	}
 }
 .p-fixed-font-max-w-768 {
+	display: none;
 	@media (max-width: 768px) {
-		position: fixed;
-		top: 0;
-		right: 0;
-		height: 8rem;
-		background-color: var(--bg-darker-color);
-		width: 100vw;
-		border-radius: 0 0 2rem 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed !important;
+		bottom: 5%;
+		right: 5%;
+		height: 4rem;
+		width: 4rem;
+		background-color: var(--font-color);
+		z-index: 2;
+		// border-radius: 0 0 2rem 2rem;
 	}
 }
 

@@ -1,5 +1,21 @@
+<a href="#" class="p-fixed-font-max-w-768">
+	<button
+		mat-fab
+		style="background-color: var(--font-color)"
+		aria-label="Example icon button with a home icon"
+	>
+		<mat-icon style="color: var(--bg-darker-color)">home</mat-icon>
+	</button>
+</a>
+
 <mat-drawer-container class="bg-dark-color" hasBackdrop="true">
-	<mat-drawer #drawer role="navigation" mode="over" class="bg-darker-color">
+	<mat-drawer
+		#drawer
+		autoFocus="false"
+		role="navigation"
+		mode="side"
+		class="bg-darker-color"
+	>
 		<div
 			class="row flex-column justify-content-center align-items-center m-5 vh-100"
 		>
@@ -19,7 +35,7 @@
 				class="container-fluid d-flex flex-column justify-content-center pt-2 header shadow-sm"
 			>
 				<mat-toolbar-row
-					class="navbar align-items-baseline p-4 justify-content-between p-fixed-font-max-w-768 mb-5"
+					class="navbar align-items-baseline p-4 justify-content-between"
 				>
 					<h2
 						class="col-sm-7 col-md-5 h2 d-flex justify-content-center font-color"
