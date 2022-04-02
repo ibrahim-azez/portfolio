@@ -32,19 +32,21 @@ body {
 
 	margin: 0;
 
+	// scroll-behavior: smooth;
+
 	// font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-::-webkit-scrollbar {
-	width: 0.9rem;
-	background-color: var(--bg-darker-color);
-}
+// ::-webkit-scrollbar {
+// 	width: 0.9rem;
+// 	background-color: var(--bg-darker-color);
+// }
 
-::-webkit-scrollbar-thumb {
-	background-color: var(--font-color) !important;
+// ::-webkit-scrollbar-thumb {
+// 	background-color: var(--font-color) !important;
 
-	border-radius: 1rem;
-}
+// 	border-radius: 1rem;
+// }
 
 .icon {
 	display: inline-block;
