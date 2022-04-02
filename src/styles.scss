@@ -41,16 +41,24 @@ body {
 	// font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-// ::-webkit-scrollbar {
-// 	width: 0.9rem;
-// 	background-color: var(--bg-darker-color);
-// }
+@media (min-width: 768px) {
+	::-webkit-scrollbar {
+		width: 0.9rem;
+		background-color: var(--bg-darker-color);
+	}
 
-// ::-webkit-scrollbar-thumb {
-// 	background-color: var(--font-color) !important;
+	::-webkit-scrollbar-thumb {
+		background-color: var(--font-color) !important;
 
-// 	border-radius: 1rem;
-// }
+		border-radius: 1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	::-webkit-scrollbar {
+		width: 0;
+	}
+}
 
 .icon {
 	display: inline-block;
