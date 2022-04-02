@@ -63,7 +63,7 @@ export class AppComponent {
 
 	educationDetails = [
 		{
-			title: 'Information Technology Engineer',
+			title: 'Information Technology Engineering',
 			date: '2015-2020',
 			place: 'Al-Baath University',
 		},
@@ -79,7 +79,7 @@ export class AppComponent {
 		"NestJS: The Complete Developer's Guide",
 		'Advanced CSS and Sass: Flexbox, Grid, Animations and More!',
 		// 'The Complete JavaScript Course 2022: From Zero to Expert!',
-		// 'Node.js, Express, MongoDB & More - The Complete Bootcamp 2021',
+		'Node.js, Express, MongoDB & More - The Complete Bootcamp 2021',
 	];
 
 	skills = {
