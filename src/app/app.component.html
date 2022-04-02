@@ -28,15 +28,15 @@
 				style="background-color: var(--font-color)"
 				aria-label="Example icon button with a home icon"
 			>
-				<mat-icon style="color: var(--bg-darker-color)">home</mat-icon>
+				<mat-icon style="color: var(--bg-darker-color)">arrow_upward</mat-icon>
 			</button>
 		</a>
 		<div class="container-fluid">
 			<header
-				class="container-fluid d-flex flex-column justify-content-center pt-2 header shadow-sm"
+				class="container-fluid d-flex flex-column justify-content-center pt-2 shadow-sm"
 			>
 				<mat-toolbar-row
-					class="navbar align-items-baseline p-4 justify-content-between"
+					class="navbar align-items-baseline p-4 justify-content-between mb-5"
 				>
 					<h2
 						class="col-sm-7 col-md-5 h2 d-flex justify-content-center font-color"
@@ -48,6 +48,7 @@
 							aria-label="Close"
 							mat-icon-button
 							(click)="drawer.toggle()"
+							(click)="overflowHidden = true"
 							class="n-d-min-w-768 row justify-content-end"
 						>
 							<mat-icon>menu</mat-icon>
@@ -66,7 +67,7 @@
 						>
 					</div>
 				</mat-toolbar-row>
-				<div class="row display-6 h-45">
+				<div class="row display-6 h-45 linear-gradient br-20">
 					<div
 						class="col-sm-12 col-md-6 d-flex flex-column align-items-center justify-content-center"
 					>
