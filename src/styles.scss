@@ -35,6 +35,17 @@ body {
 	// font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+::-webkit-scrollbar {
+	width: 0.9rem;
+	background-color: var(--bg-darker-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--font-color) !important;
+
+	border-radius: 1rem;
+}
+
 .icon {
 	display: inline-block;
 	width: 2.5rem;
@@ -64,25 +75,13 @@ body {
 	background-color: var(--bg-darker-color) !important;
 }
 
-// .fs-14 {
-// 	font-size: 1.4rem !important;
-// }
-
-// .fs-20 {
-// 	font-size: 2rem !important;
-// }
-
-// .w-75 {
-// 	width: 75% !important;
-// }
+.overflow_y_hidden {
+	overflow-y: hidden !important;
+}
 
 .h-45 {
 	height: 45rem !important;
 }
-
-// .h-15 {
-// 	height: 15% !important;
-// }
 
 .hw-100 {
 	width: 100% !important;
@@ -96,32 +95,3 @@ body {
 .br-20 {
 	border-radius: 2rem;
 }
-
-.transformHundredRight {
-	// display: none !important;
-	@media only screen and (min-width: 0px) and (max-width: 750px) {
-		transform: translateX(100vw) !important;
-	}
-}
-
-// .transformFiftyRight {
-// 	transform: translateX(50vw) !important;
-// }
-
-.transformZero {
-	// transform: translateX(0) !important;
-	// display: none !important;
-	animation-duration: 1s;
-	animation-name: shake;
-	// animation-iteration-count: infinite;
-}
-
-// @keyframes movingUp {
-// 	from {
-// 		transform: translateY(10rem);
-// 	}
-
-// 	to {
-// 		transform: translateX(0rem);
-// 	}
-// }

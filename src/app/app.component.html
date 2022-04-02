@@ -1,14 +1,18 @@
-<mat-sidenav-container class="bg-dark-color" hasBackdrop="true">
+<mat-sidenav-container
+	class="bg-dark-color"
+	hasBackdrop="true"
+	style="overflow-y: hidden; height: 100vh"
+>
 	<mat-sidenav
 		#drawer
 		autoFocus="false"
 		role="navigation"
 		mode="over"
-		class="bg-darker-color"
 		role="main"
+		class="bg-darker-color"
 	>
 		<div
-			class="row flex-column justify-content-center align-items-center m-5 vh-100"
+			class="d-flex flex-column justify-content-center align-items-center p-5 h-100"
 		>
 			<a
 				(click)="drawer.toggle()"
@@ -39,7 +43,7 @@
 					class="navbar align-items-baseline p-4 justify-content-between mb-5"
 				>
 					<h2
-						class="col-sm-7 col-md-5 h2 d-flex justify-content-center font-color"
+						class="col-sm-7 col-md-5 h2 fw-bold d-flex justify-content-center font-color"
 					>
 						<span><\</span>{{ user.fullName }}<span>></span>
 					</h2>
@@ -48,7 +52,6 @@
 							aria-label="Close"
 							mat-icon-button
 							(click)="drawer.toggle()"
-							(click)="overflowHidden = true"
 							class="n-d-min-w-768 row justify-content-end"
 						>
 							<mat-icon>menu</mat-icon>

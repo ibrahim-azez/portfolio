@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	overflowHidden: boolean = false;
+	// overflowHidden: boolean = false;
 
 	navLinks = ['about', 'contact', 'skills', 'services'];
 	user = {
