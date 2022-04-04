@@ -46,7 +46,9 @@
 					<h2
 						class="col-sm-7 col-md-6 col-lg-5 h2 fw-bold d-flex justify-content-center font-color"
 					>
-						<span><\</span>{{ user.fullName }}<span>></span>
+						<span class="primary-color"><\</span
+						><span> {{ user.fullName }}</span
+						><span class="primary-color">></span>
 					</h2>
 					<div class="col-2 col-md-auto">
 						<button
@@ -162,7 +164,9 @@
 					<div
 						class="row flex-column align-items-center justify-content-center"
 					>
-						<h2 class="col-auto h2 fw-bold">{{ aboutMe.title }}</h2>
+						<h2 class="col-auto h2 fs-2 fw-bold font-color">
+							{{ aboutMe.title }}
+						</h2>
 						<p style="text-align: center" class="col-auto fs-4 w-75">
 							{{ aboutMe.description }}
 						</p>
@@ -189,18 +193,18 @@
 							>
 						</div>
 					</div>
-					<div class="col-auto col-md-5 justify-content-center p-5">
+					<div class="col-auto col-md-5 justify-content-center py-5">
 						<h3
-							class="row h3 font-color fw-bold fs-2 mb-5 justify-content-sm-center"
+							class="row h3 font-color fw-bold fs-3 mb-5 justify-content-sm-center"
 						>
 							Education
 						</h3>
 
 						<div class="row gap-1">
 							<div class="col-auto" *ngFor="let item of educationDetails">
-								<strong class="col fs-3">{{ item.title }}</strong>
-								<p class="col">{{ item.date }}</p>
-								<p class="col">{{ item.place }}</p>
+								<strong class="col fs-2">{{ item.title }}</strong>
+								<p class="col-sm-12 col fs-5">{{ item.date }}</p>
+								<p class="col-sm-12 col fs-4">{{ item.place }}</p>
 							</div>
 						</div>
 					</div>
@@ -247,7 +251,7 @@
 						<div>
 							<div class="col-12">
 								<div class="row justify-content-center align-items-baseline">
-									<strong class="fs-3 fw-bold col-auto">email</strong>
+									<strong class="fs-3 fw-bold col-auto">Email</strong>
 									<p class="fs-3 col-auto">{{ user.email }}</p>
 								</div>
 							</div>

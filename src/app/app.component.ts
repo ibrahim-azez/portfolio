@@ -27,10 +27,13 @@ export class AppComponent {
 		icon: 'aboutme',
 		style: 'icon',
 		title: 'About me',
-		description: `Focused IT Engineer, eager to new challenges to grow
-    and further improve my IT skills. Have proven
-    knowledge of MEAN Stack development with NestJS,
-    database development with SQL Or NoSQL databases`,
+		description: `Full stack engineer, I use Angular, Angular Universal, Angular PWA, Angular Material and Bootstrap For frontend development.
+		For backend i ues nodeJS as a run time environment and NestJS over ExpressJS for the development.
+		I build endpoints using either RESTful API methodology or GraphQL Apollo protocol.
+		Modeling and building databases with NoSQL database using MongoDB by the help of mongoose package and SQL database with PostgreSQL using typeORM.
+		Git for version control system.
+		Nx monorepo for wrapping frontend with backend and Linux as Operating system.
+		`,
 	};
 
 	serviceList: IService[] = [
@@ -98,6 +101,7 @@ export class AppComponent {
 		ngxs: 'ngxs',
 		nodejs: 'nodejs',
 		bootstrap: 'bootstrap',
+		passportjs: 'passportjs',
 	};
 
 	footer = 'Made with ❤️ and coding ';
