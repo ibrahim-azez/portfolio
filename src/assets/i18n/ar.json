@@ -1,0 +1,65 @@
+{
+	"user": {
+		"fullName": "ابراهيم عزيز",
+		"email": "ibrahimazez@protonamail.com",
+		"jobTitle": "مهندس برمجيات"
+	},
+	"aboutMe": {
+		"title": "حول",
+		"description": "Angular مهندس برمجيات استخدم "
+	},
+	"serviceList": [
+		{
+			"title": "Angular",
+			"description": "Angular تصميم وتطوير مةاقع باستخدام"
+		},
+		{
+			"title": "Styling",
+			"description": "Bootstrap و SCSS تنسيق المواقع باستخدام"
+		},
+		{
+			"title": "Node.js",
+			"description": "بناء مخدم من قبله"
+		},
+		{
+			"title": "DataBase",
+			"description": "MongoDB نمذجة قاعدة البيانات باستخدام"
+		}
+	],
+	"educationDetails": [
+		{
+			"title": "هندسة التكنولوجيا المعلومات",
+			"date": "2015-2020",
+			"place": "جامعة البعث"
+		},
+		{
+			"title": "ماجستير في علوم الويب",
+			"date": "2020-current",
+			"place": "الجامعة الافتراضية السورية"
+		}
+	],
+	"courses": [
+		"The Modern Angular Bootcamp",
+		"NestJS: The Complete Developer's Guide",
+		"Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
+		"Node.js, Express, MongoDB & More - The Complete Bootcamp 2021"
+	],
+	"skills": {
+		"linux": "linux",
+		"html5": "html5",
+		"css3": "css3",
+		"javascript": "javascript",
+		"typescript": "typescript",
+		"angular": "angular",
+		"graphql": "graphql",
+		"express": "express",
+		"nestjs": "nestjs",
+		"mongoDB": "mongodb",
+		"postgreSQL": "postgresql",
+		"sass": "sass",
+		"ngxs": "ngxs",
+		"nodejs": "nodejs",
+		"bootstrap": "bootstrap",
+		"passportjs": "passportjs"
+	}
+}
