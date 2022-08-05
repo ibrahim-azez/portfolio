@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './core/material.module';
+import { NgxTranslateModule } from './core/modules/ngx-translate.module';
+import { AngularMaterialModule } from './core/modules/angular-material.module';
+
 // import { WorkerAppModule } from '@angular/platform-webworker';
 
 @NgModule({
@@ -19,7 +21,8 @@ import { MaterialModule } from './core/material.module';
 			registrationStrategy: 'registerWhenStable:30000',
 		}),
 		BrowserAnimationsModule,
-		MaterialModule,
+		AngularMaterialModule,
+		NgxTranslateModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

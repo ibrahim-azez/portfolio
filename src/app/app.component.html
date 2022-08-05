@@ -43,13 +43,27 @@
 				<mat-toolbar-row
 					class="navbar align-items-baseline p-4 justify-content-between mb-5"
 				>
-					<h2
+					<div
 						class="col-sm-7 col-md-6 col-lg-5 h2 fw-bold d-flex justify-content-center font-color"
 					>
-						<span class="primary-color"><\</span
-						><span> {{ user.fullName }}</span
-						><span class="primary-color">></span>
-					</h2>
+						<h2>
+							<span class="primary-color"><\</span
+							><span> {{ user.fullName | translate }}</span
+							><span class="primary-color">></span>
+						</h2>
+						<ul>
+							<ng-container *ngFor="let language of languageList">
+								<li role="menuitem">
+									<a
+										class="dropdown-item"
+										(click)="changeSiteLanguage(language.code)"
+									>
+										{{ language.label }}
+									</a>
+								</li>
+							</ng-container>
+						</ul>
+					</div>
 					<div class="col-2 col-md-auto">
 						<button
 							aria-label="Close"
@@ -78,11 +92,12 @@
 						class="col-sm-12 col-md-6 d-flex flex-column align-items-center justify-content-center"
 					>
 						<div class="lh-lg">
-							<p class="fs-1 fw-bold">Hi There</p>
-							<p>
-								I'm <span class="font-color"> {{ user.fullName }}</span>
+							<p i18n class="fs-1 fw-bold">Hi There</p>
+							<p i18n>
+								I'm
+								<span class="font-color"> {{ user.fullName | translate }}</span>
 							</p>
-							<p>I'm a {{ user.jobTitle }}</p>
+							<p i18n>I'm a {{ user.jobTitle | translate }}</p>
 						</div>
 						<div class="row fs-3 bg-color br-10 w-auto px-2">
 							<a
@@ -138,8 +153,8 @@
 								</svg>
 							</div>
 							<div class="col-12">
-								<h2 class="h2 fw-bold">{{ service.title }}</h2>
-								<p class="fs-4">{{ service.description }}</p>
+								<h2 i18n class="h2 fw-bold">{{ service.title }}</h2>
+								<p i18n class="fs-4">{{ service.description }}</p>
 							</div>
 						</div>
 					</div>
@@ -164,10 +179,10 @@
 					<div
 						class="row flex-column align-items-center justify-content-center"
 					>
-						<h2 class="col-auto h2 fs-2 fw-bold font-color">
+						<h2 i18n class="col-auto h2 fs-2 fw-bold font-color">
 							{{ aboutMe.title }}
 						</h2>
-						<p style="text-align: center" class="col-auto fs-4 w-75">
+						<p i18n style="text-align: center" class="col-auto fs-4 w-75">
 							{{ aboutMe.description }}
 						</p>
 					</div>
@@ -180,6 +195,7 @@
 						class="col-auto col-md-5 justify-content-center align-items-center p-5"
 					>
 						<h3
+							i18n
 							class="row h3 font-color fw-bold fs-2 mb-5 justify-content-sm-center"
 						>
 							Some Coursework
@@ -187,6 +203,7 @@
 
 						<div class="row gap-5 fs-3">
 							<strong
+								i18n
 								*ngFor="let item of courses"
 								class="text-center-d-max-w-768"
 								>{{ item }}</strong
@@ -195,6 +212,7 @@
 					</div>
 					<div class="col-auto col-md-5 justify-content-center py-5">
 						<h3
+							i18n
 							class="row h3 font-color fw-bold fs-3 mb-5 justify-content-sm-center"
 						>
 							Education
@@ -202,9 +220,9 @@
 
 						<div class="row gap-1">
 							<div class="col-auto" *ngFor="let item of educationDetails">
-								<strong class="col fs-2">{{ item.title }}</strong>
-								<p class="col-sm-12 col fs-5">{{ item.date }}</p>
-								<p class="col-sm-12 col fs-4">{{ item.place }}</p>
+								<strong i18n class="col fs-2">{{ item.title }}</strong>
+								<p i18n class="col-sm-12 col fs-5">{{ item.date }}</p>
+								<p i18n class="col-sm-12 col fs-4">{{ item.place }}</p>
 							</div>
 						</div>
 					</div>
@@ -234,7 +252,9 @@
 								attr.xlink:href="../assets/icons/sprite.svg#{{ item.value }}"
 							></use>
 						</svg>
-						<strong class="fs-4 pt-2 text-uppercase">{{ item.key }}</strong>
+						<strong i18n class="fs-4 pt-2 text-uppercase">{{
+							item.key
+						}}</strong>
 					</div>
 				</div>
 			</section>
@@ -245,14 +265,17 @@
 			>
 				<div class="row justify-content-around">
 					<div class="col">
-						<h3 class="row justify-content-center h3 font-color fw-bold fs-2">
+						<h3
+							i18n
+							class="row justify-content-center h3 font-color fw-bold fs-2"
+						>
 							Personal Details
 						</h3>
 						<div>
 							<div class="col-12">
 								<div class="row justify-content-center align-items-baseline">
-									<strong class="fs-3 fw-bold col-auto">Email</strong>
-									<p class="fs-3 col-auto">{{ user.email }}</p>
+									<strong i18n class="fs-3 fw-bold col-auto">Email</strong>
+									<p i18n class="fs-3 col-auto">{{ user.email }}</p>
 								</div>
 							</div>
 						</div>
@@ -269,7 +292,7 @@
 				</div>
 			</section>
 			<footer class="container my-5 border-top-blue">
-				<p class="row justify-content-center fs-3 py-5">{{ footer }}</p>
+				<p i18n class="row justify-content-center fs-3 py-5">{{ footer }}</p>
 			</footer>
 		</div>
 	</mat-sidenav-content>

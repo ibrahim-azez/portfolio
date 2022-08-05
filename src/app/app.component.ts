@@ -1,5 +1,7 @@
 import { IService } from './core/model';
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
 	selector: 'app-root',
@@ -7,7 +9,31 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	// overflowHidden: boolean = false;
+	siteLanguage = 'English';
+	languageList = [
+		{ code: 'en', label: 'English' },
+		{ code: 'ar', label: 'Arabic' },
+	];
+
+	constructor(
+		private titleService: Title,
+		private translate: TranslateService
+	) {
+		this.titleService.setTitle($localize`Ibrahim Azez`);
+	}
+
+	changeSiteLanguage(localeCode: string): void {
+		const selectedLanguage = this.languageList
+			.find((language) => language.code === localeCode)
+			?.label.toString();
+		if (selectedLanguage) {
+			this.siteLanguage = selectedLanguage;
+			this.translate.use(localeCode);
+		}
+		const currentLanguage = this.translate.currentLang;
+		console.log('currentLanguage', currentLanguage);
+		console.log(this.translate);
+	}
 
 	navLinks = ['about', 'contact', 'skills', 'services'];
 	user = {
@@ -52,7 +78,7 @@ export class AppComponent {
 		{
 			icon: 'nodejs',
 			style: 'service',
-			title: 'NodeJS',
+			title: 'Node.js',
 			description: `Building Backend server with NestJS over ExpressJS with graphQL protocol or RESTful API`,
 		},
 
